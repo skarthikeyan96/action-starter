@@ -23,6 +23,7 @@ async function run () {
         return;
     }
 
+    console.log(octokit.issues)
    
 
     await octokit.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: pull_request_number, body: "Thank you for creating the pull request" }))
