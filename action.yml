@@ -1,0 +1,6 @@
+name: Issue comment action
+description: Comments on the issue created on your repository
+
+runs:
+  using: node12
+  main: ./index.js
