@@ -1,5 +1,4 @@
-import github from '@actions/github';
-import core from '@actions/core';
+const core = require('@actions/core')
 
 async function run () {
     const token = core.getInput('access-token');
