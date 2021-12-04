@@ -1,9 +1,5 @@
 name: Issue comment action
 description: Comments on the issue created on your repository
-inputs:
-  access-token:
-    description: "A personal access token needed to push your site after it has been built."
-    required: true
 runs:
   using: node12
   main: ./index.js

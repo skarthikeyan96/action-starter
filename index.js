@@ -1,7 +1,7 @@
 const core = require('@actions/core')
 
 async function run () {
-    const token = core.getInput('access-token');
+    const token = core.getInput('GITHUB_TOKEN');
 
     if(!token){
         core.setFailed('Please provide the access token to continue further')
