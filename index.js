@@ -15,7 +15,7 @@ async function run () {
 
     
     const context = github.context;
-    console.log(context.payload.issues)
+    console.log(context.payload)
 //     const issue_number = context.payload.issues.number;
 
 
