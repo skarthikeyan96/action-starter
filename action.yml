@@ -1,5 +1,9 @@
 name: Issue comment action
 description: Comments on the issue created on your repository
+inputs:
+  GITHUB_TOKEN: 
+    description: 'Github Token'
+    required: true
 runs:
   using: node12
   main: ./index.js
