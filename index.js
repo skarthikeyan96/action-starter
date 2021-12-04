@@ -7,7 +7,16 @@ async function run () {
         core.setFailed('Please provide the access token to continue further')
         return;
     }
-    console.log('Access token got it 😇 ')    
+    
+    console.log('Access token got it 😇 ')  
+    
+    const octokit = github.getOctokit(token)
+
+    console.log(octokit)
+    
+    const { context = {}} = github;
+
+    console.log(context.payload)
 }
 
 run ();
