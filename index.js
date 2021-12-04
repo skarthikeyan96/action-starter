@@ -15,10 +15,10 @@ async function run () {
 
     
     const context = github.context;
-
+    console.log(context.payload.issues)
     const issue_number = context.payload.issues.number;
 
-    console.log(context.payload.issues)
+
     
     if (context.payload.issues == null) {
         core.setFailed('Not linked to a pull request');
