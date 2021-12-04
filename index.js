@@ -16,21 +16,21 @@ async function run () {
     
     const context = github.context;
     console.log(context.payload.issues)
-    const issue_number = context.payload.issues.number;
+//     const issue_number = context.payload.issues.number;
 
 
     
-    if (context.payload.issues == null) {
-        core.setFailed('Not linked to a pull request');
-        return;
-    }
+//     if (context.payload.issues == null) {
+//         core.setFailed('Not linked to a pull request');
+//         return;
+//     }
 
-    console.log(octokit)
+//     console.log(octokit)
    
 
-    await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: issue_number, body: "Thank you for creating the Issue" }))
+//     await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: issue_number, body: "Thank you for creating the Issue" }))
 
-    console.log(context.payload)
+//     console.log(context.payload)
 }
 
 run ();
