@@ -16,7 +16,7 @@ async function run () {
     
     const context = github.context;
     console.log(context.payload)
-//     const issue_number = context.payload.issues.number;
+    const issue_number = context.payload.issue.number;
 
 
     
@@ -28,7 +28,7 @@ async function run () {
 //     console.log(octokit)
    
 
-//     await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: issue_number, body: "Thank you for creating the Issue" }))
+    await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: issue_number, body: "Thank you for creating the Issue" }))
 
 //     console.log(context.payload)
 }
