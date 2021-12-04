@@ -16,7 +16,7 @@ async function run () {
     
     const context = github.context;
 
-    const pull_request_number = context.payload.pull_request.number;
+    const issue_number = context.payload.issue.number;
 
     if (context.payload.pull_request == null) {
         core.setFailed('Not linked to a pull request');
@@ -26,7 +26,7 @@ async function run () {
     console.log(octokit)
    
 
-    await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: pull_request_number, body: "Thank you for creating the pull request" }))
+    await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: issue_number, body: "Thank you for creating the Issue" }))
 
     console.log(context.payload)
 }

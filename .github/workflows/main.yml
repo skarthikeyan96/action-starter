@@ -1,9 +1,8 @@
 name: GitHub Actions Demo
 on:
-  push:
-     branches:
-      - main
   pull_request:
+    types: [opened]
+  issues:
     types: [opened]
 jobs:
   build:
