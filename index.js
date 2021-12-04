@@ -26,7 +26,7 @@ async function run () {
     console.log(octokit)
    
 
-    await octokit.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: pull_request_number, body: "Thank you for creating the pull request" }))
+    await octokit.rest.issues.createComment(Object.assign(Object.assign({}, context.repo), { issue_number: pull_request_number, body: "Thank you for creating the pull request" }))
 
     console.log(context.payload)
 }
